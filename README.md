@@ -10,7 +10,7 @@ A multi-agent AI system that learns from weekly staffing decisions at a warehous
 
 - **8-agent LangGraph pipeline** — Forecast, Knowledge Curation, Regime Detection, Planning, Cost Optimisation, Red Team, Human Review, and Debrief agents collaborate in a directed graph
 - **Statistical correction stack** — bias correction, day-of-week factors, regime detection (pick-by-light), newsvendor optimisation
-- **Real-time dashboard** — WebSocket-powered browser UI showing agent thinking, KPI tiles, risk scenarios, and marketplace atoms (follows the paretos design system)
+- **Real-time dashboard** — WebSocket-powered browser UI showing agent thinking, KPI tiles, risk scenarios, and marketplace atoms (follows a modern design system)
 - **Walk-forward backtesting** — simulates 20 weekly decision cycles with strict no-future-data-leakage
 - **Micro-Shift Marketplace** — decomposes staffing plans into 2-hour claimable work atoms with dynamic pricing and German labour law (ArbZG) compliance
 - **Asymmetric cost model** — overstaffing (€230/pd idle) vs understaffing (€41.40/pd overtime + €600 SLA penalty beyond 2.0 pd tolerance)
@@ -63,7 +63,7 @@ KPI tiles showing forecast accuracy, cost savings, gap closure, newsvendor perce
 ## Project Structure
 
 ```
-paretos/
+Warehouse-Staffing-Optimizer/
 ├── src/
 │   ├── paretos_core/          # Config, schemas, cost model, data loading, exceptions
 │   ├── paretos_stats/         # Bias correction, DoW adjustment, changepoint, corrections
@@ -101,8 +101,8 @@ paretos/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/decision-hack/team-6.git
-cd team-6
+git clone https://github.com/DharmikSuchak/Warehouse-Staffing-Optimizer.git
+cd Warehouse-Staffing-Optimizer
 ```
 
 ### 2. Create a virtual environment
@@ -243,7 +243,7 @@ The dashboard requires the `websockets` package (included in `[agents]`). It ope
 
 ## Dataset Reference
 
-The `data/` directory contains the hackathon dataset from the paretos "Compounding Decisions" challenge. See `data/clean/` for tidy CSVs. Key files:
+The `data/` directory contains the dataset used for training and simulation. See `data/clean/` for tidy CSVs. Key files:
 
 | File | Description |
 |---|---|
